@@ -1,0 +1,112 @@
+
+1)package installation,service start,stop,uninstallation,deployment
+  tool installation
+2)copy module,fetch module,file,zip
+3)security,templates,handlers,tags
+4)roles,resource launching
+-------------------------------------
+Installation :pbook1.yml
+
+
+
+
+service:pbook2.yml
+
+---
+- hosts: node1
+  name: play1
+  become: true
+  tasks:
+    - name: stop apache webserver service
+      service: name=apache2 state=stopped
+- hosts: node2
+  name: play1
+  become: true
+  tasks:
+    - name: stop httpdwebserver service
+      service: name=httpd state=stopped
+
+
+deployment:pbook3.yml
+
+
+---
+- hosts: webservers
+  tasks:
+    - name: Remove the existing dir
+      shell: sudo rm -rf /var/www/html
+    - name: Create new dir
+      shell: sudo mkdir /var/www/html
+    - git:
+        repo: https://github.com/shashikanth-t/cloudweb.git
+        dest: /var/www/html
+        update: yes
+      become: yes
+      become_user: root
+      name: Ensure repo is up-to-date
+
+uninstallation : pbook4.yml
+
+--- 
+- 
+  hosts: test
+  tasks:
+    - name: "Start a httpd service"
+      service: "name=httpd state=stopped"
+ 
+    - name: "Un Install a httpd package "
+      yum: "name=httpd state=absent"
+
+-----------------------------
+
+--- 
+- 
+  hosts: node1
+  tasks: 
+    - 
+      apt: 
+        update_cache: true
+      become: true
+      name: "Update APT package manager repositories cache"
+    - 
+      apt: 
+        name: "{{ packages }}"
+        state: present
+      become: true
+      name: "Install Java using Ansible"
+      vars: 
+        packages: 
+          - openjdk-11-jdk
+
+
+
+
+Run :
+
+ ansible-playbook pbook2.yml
+
+ ansible-playbook pbook2.yml --limit @/root/pbooks/pbook2.retry
+---------------------------------------------------------------------
+Jenkins Installation
+
+---
+- hosts: node1
+  tasks:
+    - name: ensure the jenkins apt repository key is installed
+      apt_key: url=https://pkg.jenkins.io/debian/jenkins.io-2023.key state=present
+      become: yes
+    - name: ensure the repository is configured
+      apt_repository: repo='deb https://pkg.jenkins.io/debian-stable binary/' state=present
+      become: yes
+    - name: ensure jenkins is installed
+      apt: name=jenkins update_cache=yes
+      become: yes
+    - name: ensure jenkins is running
+      service: name=jenkins state=started
+
+
+
+
+
+
+
