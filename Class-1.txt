@@ -1,0 +1,501 @@
+Devops :
+
+	1)SDLC
+	2)Git
+	3)Maven
+	4)Docker ---- H
+	5)Ansible --- H
+	6)Kubernetes-- H
+	7)Jenkins ---- H
+	8)SonarQube
+	9)Nagios
+	10)Terraform ---H
+------------
+	AWS Cloud For Environment
+
+	-High speed
+	-More rechability
+-------------
+
+	Environment Setup --- Networking
+
+	 Mumbai region
+	
+
+--------------
+
+ 1)SDLC : Software Developement Lifecycle
+
+  -- 10+ 2 +3/4
+  -- Joined --- new project
+
+  --Bussiness hours :  9 - 3
+  -- mail notification
+  --property
+
+  Asseble All tech & non tech teams
+ 
+  Tech Team  : Dev,Test,Prod Support,Solution Architect
+  
+  BDO/BAs : --- Fix the Project
+
+   BDO/Client ------ BAs ---- Tech Team 
+
+   road map : BAs and SA
+
+   SDLC : Waterfall Model
+
+	1.PMs,Requirements,Devides the documentation based on priority
+	2.Analisation
+	3.Template Design : UIUX developer,webdesigner,Database Design
+	4.prototype 
+	5.coding 
+	6.Testing
+	7.Integration
+	8.Deployment
+	9.Delevery
+	10.Maintanence
+--------------------------------->
+
+       Transport ------> PPC
+
+	BWL ----------- PPC,SASOL
+
+        Source ---------------------- Destination
+
+        PPC raise an orders -----> Production support Team
+
+ -------------------------------------------------------------
+
+          SAP,  PL , Integration , OTM , Planned order , Integraters , SAP System
+
+ ----------------------------------------------------------------
+
+ Agile :
+
+       1.sprint , Name and duration : 2 weeks --- 3 months
+       2.scrum master : Leader
+       3.standup calls : duration 15 min --- 30 min
+       4.Sprint Meetings
+       5.Grooming  Meeting,
+       6.Retro Meeting
+
+   Releases : 1 task ---> down time
+
+			  --backup old version and document
+			  --place new version
+
+ Why Devops ?
+
+	--> Tool interaction
+
+	
+	2)Source code Management : Git , Git Hub
+
+	3)Build Tool : Maven  -----> Artifact Storage : Nexus,Jfrog
+
+	4)Containerisation Tool : Docker ---- H
+
+		image , Docker HUb
+
+	5)Configuration Management Tool : Ansible --- H ,Modules
+
+	6)orchestration Tool : Kubernetes-- H : To Achive 0 down time,,EKS
+
+	7)CI Tool : Jenkins ---- H : CICD Pipeline
+
+	8)QA Tool : SonarQube 
+
+	9)Monitoring : Nagios
+
+	10)IAAS Service : Terraform ---H
+
+--------------------------------------------------------
+
+Source Code Management : Git 1 week to 10 days
+
+--practice : 
+
+--Graphical  : GitHub Account
+
+--Commands   : Local commands
+
+git is irrespective of os : Windows,Linux ,Mac
+
+
+docker hub
+ 
+
+--------------------------------------------------
+
+SDLC : 
+
+Git Operations :graphical 
+
+why Git ?  GIT HUB
+
+--Git Administrator
+--Git User
+
+     Git 
+
+  Repository1 Repository2   Repository3
+
+  Project Files
+  text files
+  images
+  icons
+  js
+  css
+  flash
+  documents
+
+
+  GIT HUB : remote registry
+
+
+  https://github.com/nareshitinfo/DemoRepo.git
+
+
+ Active branch last commit will become the first commit of the new branch.
+
+
+  git stores based on versions -- version controle system
+
+  2 types of version constrole system
+
+  1.Central version controle system (CVCS)
+
+  2.Distributed version controle system (DVCS)
+
+
+ comp1				Comp2
+
+  repo				repo
+
+D1  D2  D3			D1(lc)	D2(lc)	D3(lc)
+
+
+---------------------------------------------------------------------
+
+1.working directory ---- Folder
+
+    mkdir fol1
+
+    cd fol1
+
+     git init
+
+2.Local repo ----- Folder with .git hidden subfolder
+
+3.if i add a file -----> by default file will be in untracked area
+
+4. move to stagging area ----> git add file-name
+
+5. move to commited place ---> git commit
+
+-----------------------------------------------------------------------
+
+How to upload a website template to GIT Hub
+
+1)direct upload ; drag and drop
+
+2) Uploading via tool : git hub desktop
+
+
+  nareshitinfo/website1
+
+-----------------------------------------------------------------------
+
+1.org creation
+2.repo creation
+3.file creation,uploading
+4.branch creation,deletion
+
+	--Active branch last commit , will become first commit of new branch
+
+	branch1  -- 2 files
+
+		branch2  -- 2 files
+
+-----------------------------------------------------------------------------
+
+Working with local repo
+
+	-on windows
+
+1) Enter into any drive
+2)open cmd
+3) git --version  (install git)
+4)d:
+5)mkdir demo-1
+6)cd demo-1
+7) git init
+8)git status
+9)notepad 1.txt
+10)git status
+11)git add 1.txt
+12)git status
+13)git commit -m "first commit"
+14)git log
+15)git branch
+16)git branch dev-1
+17) git branch
+18)git checkout dev-1
+19)git branch
+20)notepad a.txt
+21)git add a.txt
+   git commit -m "dev-1 commit-1"
+   git log
+   git checkout master
+   git branch -D <branch-name>
+
+   git clone <url>
+   
+   git clone https://github.com/nareshitinfo/digital.git
+
+
+
+
+
+
+
+
+
+
+
+	-on linux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+			
+
+		
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+  
+ 
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
